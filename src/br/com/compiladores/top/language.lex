@@ -23,11 +23,16 @@ DIVISAO = "/"
 
 INTEIRO = 0|[1-9][0-9]*
 
-SE = "se"
-ENQUANTO = "enquanto"
+ 
 %%
-{SE}			{imprimir("Palavra reservada se",yytext());}
-{ENQUANTO}		{imprimir("Palavra reservada enquanto",yytext());}
+"inicio"		{imprimir("Início de um bloco",yytext());}
+"fim"			{imprimir("Fim de um bloco",yytext());}
+">"				{imprimir("Operador maior",yytext());}
+"<"				{imprimir("Operador menor",yytext());}
+"=="			{imprimir("Operador de Igual",yytext());}
+"="			{imprimir("Operador de atribição",yytext());}
+"se"			{imprimir("Palavra reservada se",yytext());}
+"enquanto"		{imprimir("Palavra reservada enquanto",yytext());}
 {SOMA}			{imprimir("Operador de soma",yytext());}
 {SUBTRACAO}		{imprimir("Operador de subtração",yytext());}
 {MULTIPLICACAO} {imprimir("Operador de multiplicação",yytext());}

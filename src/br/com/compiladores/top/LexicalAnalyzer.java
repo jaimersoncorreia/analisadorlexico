@@ -33,11 +33,12 @@ class LexicalAnalyzer {
    * Translates characters to character classes
    */
   private static final String ZZ_CMAP_PACKED = 
-    "\11\0\1\1\1\1\1\22\1\22\1\1\22\0\1\1\11\0\1\7"+
-    "\1\5\1\0\1\6\1\0\1\10\1\11\11\4\7\0\32\2\4\0"+
-    "\1\2\1\0\1\17\3\2\1\13\10\2\1\14\1\21\1\2\1\15"+
-    "\1\2\1\12\1\20\1\16\5\2\1\0\1\3\10\0\1\22\u1fa2\0"+
-    "\1\22\1\22\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\udfe6\0";
+    "\11\0\1\1\1\1\1\31\1\31\1\1\22\0\1\1\11\0\1\7"+
+    "\1\5\1\0\1\6\1\0\1\10\1\11\11\4\2\0\1\21\1\22"+
+    "\1\20\2\0\32\2\4\0\1\2\1\0\1\27\1\2\1\14\1\2"+
+    "\1\24\1\16\2\2\1\12\3\2\1\17\1\13\1\15\1\2\1\25"+
+    "\1\2\1\23\1\30\1\26\5\2\1\0\1\3\10\0\1\31\u1fa2\0"+
+    "\1\31\1\31\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\udfe6\0";
 
   /** 
    * Translates characters to character classes
@@ -51,10 +52,11 @@ class LexicalAnalyzer {
 
   private static final String ZZ_ACTION_PACKED_0 =
     "\1\0\1\1\1\2\1\3\1\2\1\4\1\5\1\6"+
-    "\1\7\1\10\1\4\2\3\1\11\6\3\1\12";
+    "\1\7\1\10\1\4\2\3\1\11\1\12\1\13\4\3"+
+    "\1\14\1\15\2\3\1\16\5\3\1\17\2\3\1\20";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[21];
+    int [] result = new int[34];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -79,12 +81,14 @@ class LexicalAnalyzer {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\23\0\23\0\46\0\46\0\71\0\23\0\23"+
-    "\0\23\0\23\0\23\0\114\0\137\0\46\0\162\0\205"+
-    "\0\230\0\253\0\276\0\321\0\46";
+    "\0\0\0\32\0\32\0\64\0\64\0\116\0\32\0\32"+
+    "\0\32\0\32\0\32\0\150\0\202\0\32\0\32\0\234"+
+    "\0\266\0\320\0\352\0\u0104\0\32\0\64\0\u011e\0\u0138"+
+    "\0\64\0\u0152\0\u016c\0\u0186\0\u01a0\0\u01ba\0\64\0\u01d4"+
+    "\0\u01ee\0\64";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[21];
+    int [] result = new int[34];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -108,17 +112,27 @@ class LexicalAnalyzer {
 
   private static final String ZZ_TRANS_PACKED_0 =
     "\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11"+
-    "\1\12\1\13\1\14\1\15\6\4\26\0\3\4\4\0"+
-    "\11\4\5\0\1\6\4\0\1\6\13\0\3\4\4\0"+
-    "\2\4\1\16\6\4\3\0\3\4\4\0\3\4\1\17"+
-    "\5\4\3\0\3\4\4\0\4\4\1\20\4\4\3\0"+
-    "\3\4\4\0\5\4\1\21\3\4\3\0\3\4\4\0"+
-    "\6\4\1\22\2\4\3\0\3\4\4\0\3\4\1\23"+
-    "\5\4\3\0\3\4\4\0\7\4\1\24\1\4\3\0"+
-    "\3\4\4\0\10\4\1\25\1\0";
+    "\1\12\1\13\1\14\3\4\1\15\1\4\1\16\1\17"+
+    "\1\20\1\21\1\22\4\4\35\0\3\4\4\0\7\4"+
+    "\3\0\6\4\5\0\1\6\4\0\1\6\22\0\3\4"+
+    "\4\0\2\4\1\23\4\4\3\0\6\4\3\0\3\4"+
+    "\4\0\1\4\1\24\5\4\3\0\6\4\23\0\1\25"+
+    "\11\0\3\4\4\0\7\4\3\0\1\4\1\26\4\4"+
+    "\3\0\3\4\4\0\2\4\1\27\4\4\3\0\6\4"+
+    "\3\0\3\4\4\0\1\4\1\30\5\4\3\0\6\4"+
+    "\3\0\3\4\4\0\6\4\1\31\3\0\6\4\3\0"+
+    "\3\4\4\0\7\4\3\0\2\4\1\32\3\4\3\0"+
+    "\3\4\4\0\3\4\1\33\3\4\3\0\6\4\3\0"+
+    "\3\4\4\0\7\4\3\0\3\4\1\34\2\4\3\0"+
+    "\3\4\4\0\1\4\1\35\5\4\3\0\6\4\3\0"+
+    "\3\4\4\0\7\4\3\0\4\4\1\36\1\4\3\0"+
+    "\3\4\4\0\4\4\1\37\2\4\3\0\6\4\3\0"+
+    "\3\4\4\0\2\4\1\40\4\4\3\0\6\4\3\0"+
+    "\3\4\4\0\7\4\3\0\5\4\1\41\3\0\3\4"+
+    "\4\0\4\4\1\42\2\4\3\0\6\4\1\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[228];
+    int [] result = new int[520];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -156,10 +170,11 @@ class LexicalAnalyzer {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\2\11\3\1\5\11\12\1";
+    "\1\0\2\11\3\1\5\11\2\1\2\11\5\1\1\11"+
+    "\15\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[21];
+    int [] result = new int[34];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -262,7 +277,7 @@ private void imprimir(String descricao, String lexema){
     char [] map = new char[0x110000];
     int i = 0;  /* index in packed string  */
     int j = 0;  /* index in unpacked array */
-    while (i < 118) {
+    while (i < 138) {
       int  count = packed.charAt(i++);
       char value = packed.charAt(i++);
       do map[j++] = value; while (--count > 0);
@@ -559,43 +574,67 @@ private void imprimir(String descricao, String lexema){
           case 1: 
             { throw new RuntimeException("Caractere inválido " + yytext());
             }
-          case 11: break;
+          case 17: break;
           case 2: 
             { imprimir("Espaço em branco",yytext());
             }
-          case 12: break;
+          case 18: break;
           case 3: 
             { imprimir("Identificador",yytext());
             }
-          case 13: break;
+          case 19: break;
           case 4: 
             { imprimir("Número inteiro",yytext());
             }
-          case 14: break;
+          case 20: break;
           case 5: 
             { imprimir("Operador de soma",yytext());
             }
-          case 15: break;
+          case 21: break;
           case 6: 
             { imprimir("Operador de subtração",yytext());
             }
-          case 16: break;
+          case 22: break;
           case 7: 
             { imprimir("Operador de multiplicação",yytext());
             }
-          case 17: break;
+          case 23: break;
           case 8: 
             { imprimir("Operador de divisão",yytext());
             }
-          case 18: break;
+          case 24: break;
           case 9: 
+            { imprimir("Operador maior",yytext());
+            }
+          case 25: break;
+          case 10: 
+            { imprimir("Operador menor",yytext());
+            }
+          case 26: break;
+          case 11: 
+            { imprimir("Operador de atribição",yytext());
+            }
+          case 27: break;
+          case 12: 
+            { imprimir("Operador de Igual",yytext());
+            }
+          case 28: break;
+          case 13: 
             { imprimir("Palavra reservada se",yytext());
             }
-          case 19: break;
-          case 10: 
+          case 29: break;
+          case 14: 
+            { imprimir("Fim de um bloco",yytext());
+            }
+          case 30: break;
+          case 15: 
+            { imprimir("Início de um bloco",yytext());
+            }
+          case 31: break;
+          case 16: 
             { imprimir("Palavra reservada enquanto",yytext());
             }
-          case 20: break;
+          case 32: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }
