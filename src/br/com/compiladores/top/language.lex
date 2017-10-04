@@ -15,15 +15,19 @@ private void imprimir(String descricao, String lexema){
 
 BRANCO = [\n| |\t|\r]
 ID = [_|a-z|A-Z][a-z|A-Z|0-9|_]*
+
 SOMA = "+"
 SUBTRACAO = "-"
 MULTIPLICACAO = "*"
 DIVISAO = "/"
+
 INTEIRO = 0|[1-9][0-9]*
 
+SE = "se"
+ENQUANTO = "enquanto"
 %%
-"if"			{imprimir("Palavra reservada if",yytext());}
-"then"			{imprimir("Palavra reservada then",yytext());}
+{SE}			{imprimir("Palavra reservada se",yytext());}
+{ENQUANTO}		{imprimir("Palavra reservada enquanto",yytext());}
 {SOMA}			{imprimir("Operador de soma",yytext());}
 {SUBTRACAO}		{imprimir("Operador de subtração",yytext());}
 {MULTIPLICACAO} {imprimir("Operador de multiplicação",yytext());}

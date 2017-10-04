@@ -589,7 +589,7 @@ private void imprimir(String descricao, String lexema){
             }
           case 18: break;
           case 9: 
-            { imprimir("Palavra reservada se",yytext());
+            { imprimir("Palavra reservada if",yytext());
             }
           case 19: break;
           case 10: 
