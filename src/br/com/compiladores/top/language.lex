@@ -40,7 +40,7 @@ INTEIRO = 0|[1-9][0-9]*
 {BRANCO}	{imprimir("Espaço em branco",yytext());}
 {ID}		{imprimir("Identificador",yytext());}
 
-{INTEIRO}	{imprimir("Número inteiro",yytext());}
+{INTEIRO}	{imprimir("N�mero inteiro",yytext());}
 
 . {throw new RuntimeException("Caractere inválido " + yytext());}
 
